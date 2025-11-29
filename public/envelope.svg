@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<g data-name="Layer 2">
-<g data-name="email">
-<rect width="24" height="24" opacity="0"/>
-<path d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-.67 2L12 10.75 5.67 6zM19 18H5a1 1 0 0 1-1-1V7.25l7.4 5.55a1 1 0 0 0 .6.2 1 1 0 0 0 .6-.2L20 7.25V17a1 1 0 0 1-1 1z"/>
-</g>
-</g>
-</svg>
+<svg width="663" height="398" viewBox="0 0 663 398" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="663" height="398" rx="20" fill="#D9D9D9"/>
+<line x1="141" y1="81" x2="141" y2="311" stroke="black" stroke-width="20" stroke-linecap="round"/>
+<line x1="525.961" y1="81.0391" x2="525.039" y2="316.039" stroke="black" stroke-width="20" stroke-linecap="round"/>
+<line x1="141.025" y1="316.025" x2="523.025" y2="316.98" stroke="black" stroke-width="20" stroke-linecap="round"/>
+<line x1="141.074" y1="77.0749" x2="523.075" y2="79.9257" stroke="black" stroke-width="20" stroke-linecap="round"/>
+<line x1="144.784" y1="83.8385" x2="328.838" y2="199.216" stroke="black" stroke-width="20" stroke-linecap="round"/>
+<line x1="335.155" y1="199.214" x2="514.214" y2="86.8453" stroke="black" stroke-width="20" stroke-linecap="round"/>
+</svg>
