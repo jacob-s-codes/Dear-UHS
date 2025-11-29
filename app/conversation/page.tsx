@@ -11,7 +11,7 @@ const Page = () => {
 
 
     return (
-        <div className="h-screen bg-black flex flex-col items-center p-36">
+        <div className="h-screen bg-iron-grey flex flex-col items-center p-36">
             <div className="w-full max-w-md bg-white rounded-2xl shadow  flex flex-col gap-4 ">
                 <div className="w-full flex justify-between pt-4 px-4 top-0 sticky">
 
@@ -36,7 +36,7 @@ const Page = () => {
 
 
 
-                <div className="flex flex-col gap-[100vh] overflow-y-auto  p-2">
+                <div className="flex flex-col gap-[100vh] overflow-y-auto my-12 p-2">
                     {messages.map((msg, index) => (
                         <motion.div
                             key={msg.id}

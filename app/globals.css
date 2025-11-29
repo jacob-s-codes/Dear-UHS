@@ -4,6 +4,16 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-grey-olive: #848c8eff;
+  --color-dim-grey: #646e73ff;
+  --color-iron-grey: #435058ff;
+  --color-dim-grey-2: #626a70ff;
+  --color-grey: #818487ff;
+  --color-rosy-granite: #a09e9fff;
+  --color-silver: #bfb7b6ff;
+  --color-silver-2: #ccc6c4ff;
+  --color-dust-grey: #d8d5d2ff;
+  --color-white-smoke: #f1f2eeff;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -116,6 +126,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
