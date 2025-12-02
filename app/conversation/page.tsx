@@ -4,15 +4,18 @@ import { motion } from 'framer-motion';
 const Page = () => {
 
     const messages = [
-        { id: 1, sender: "You", text: "Hey! How are you?" },
-        { id: 2, sender: "Friend", text: "I'm good, what about you?" },
-        { id: 3, sender: "You", text: "Just working on a project." }
+        { id: 1, sender: "You", text: "Hi, it's Jacob! So glad we're working together this semester :) " },
+        { id: 2, sender: "Friend", text: "Same here! Looking forward to reading your letter" },
+        { id: 3, sender: "Time", text: "Sat, Sep 6 at 9:18 PM" },
+        { id: 4, sender: "You", text: "I have my first letter ready 😬" },
+        { id: 5, sender: "Friend", text: "Awesome, I’m ready whenever 👀" },
+        { id: 6, sender: "Image", text: "", src: "/jacobarchive1.png", link: "https://docs.google.com/document/d/1_E66rLTLh1SvB-U-MPbXiJ-5qDUgYwy0l6NgB1NIyEw/edit?usp=sharing"}
     ];
 
 
     return (
         <div className="h-screen bg-iron-grey flex flex-col items-center p-36">
-            <div className="w-full max-w-md bg-white rounded-2xl shadow  flex flex-col gap-4 ">
+            <div className="w-full max-w-md bg-white rounded-2xl shadow  flex flex-col  ">
                 <div className="w-full flex justify-between pt-4 px-4 top-0 sticky">
 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" className='text-blue-600 w-10 h-auto'>
@@ -30,13 +33,14 @@ const Page = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-camera-video w-10 h-auto text-blue-600 mr-2" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1z" />
                     </svg>
-                    
+
                 </div>
-                
 
 
+                <p className='text-center font-semibold text-gray-400 pt-4'>iMessage</p>
+                <p className='text-center font-semibold text-gray-400'>Tue, Sep 2 at 9:12 PM</p>
 
-                <div className="flex flex-col gap-[100vh] overflow-y-auto my-12 p-2">
+                <div className="flex flex-col gap-[5vh] overflow-y-auto  p-2">
                     {messages.map((msg, index) => (
                         <motion.div
                             key={msg.id}
@@ -44,14 +48,33 @@ const Page = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.3, delay: index * 0.05 }}
-                            className={`p-3 rounded-2xl max-w-[80%] shadow text-sm ${msg.sender === "You"
-                                ? "bg-blue-500 text-white self-end"
-                                : "bg-gray-400 text-white self-start"
+                            className={`p-3  max-w-[80%]  text-lg ${msg.sender === "You"
+                                ? "bg-blue-500 text-white self-end shadow rounded-2xl"
+                                : msg.sender === "Friend" ? "bg-gray-400 text-white self-start shadow rounded-2xl" : msg.sender === "Time" ? "text-gray-400 self-center bg-none font-semibold" : "bg-[#3b77db] self-end bg-none rounded-lg"
                                 }`}
                         >
-                            {msg.text}
+                            {msg.src ? (
+                                <a href={msg.link} target="_blank"><img
+                                    src={msg.src}
+                                    alt=""
+                                    
+                                    className="rounded-2xl self-end"
+                                /></a>
+                            ) : (
+                                <div
+                                    className={` text-lg ${msg.sender === "You"
+                                            ? "bg-blue-500 text-white self-end rounded-2xl"
+                                            : msg.sender === "Friend"
+                                                ? "bg-gray-400 text-white self-start rounded-2xl"
+                                                : "text-gray-400 self-center font-semibold"
+                                        }`}
+                                >
+                                    {msg.text}
+                                </div>
+                            )}
                         </motion.div>
                     ))}
+
 
                 </div>
 
