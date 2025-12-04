@@ -1,7 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Science+Gothic:wght@100..900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+
+html, body {
+  font-family: 'Michroma', sans-serif;
+}
+
+@layer base {
+  :root {
+    --font-michroma: inherit;
+  }
+}
+
+@layer utilities {
+  .font-michroma {
+    font-family: var(--font-michroma);
+  }
+}
+
+/* @custom-variant dark (&:is(.dark *)); */
 
 @theme inline {
   --color-grey-olive: #848c8eff;
@@ -14,6 +32,8 @@
   --color-silver-2: #ccc6c4ff;
   --color-dust-grey: #d8d5d2ff;
   --color-white-smoke: #f1f2eeff;
+  --font-michroma: var(--font-michroma-variable);
+  --font-science-gothic: var(--font-science-gothic-variable);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -122,7 +142,7 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
@@ -130,4 +150,5 @@
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
+

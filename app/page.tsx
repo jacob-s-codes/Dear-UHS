@@ -5,7 +5,7 @@ import { MacbookScroll } from "@/components/ui/macbook-scroll";
 
 export default function Home() {
   return (
-   <div>
+   <div className="font-michroma">
       <MacbookScroll/>
    </div> 
   );

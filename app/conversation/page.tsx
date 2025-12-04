@@ -14,8 +14,12 @@ const Page = () => {
 
 
     return (
-        <div className="h-screen bg-iron-grey flex flex-col items-center p-36">
-            <div className="w-full max-w-md bg-white rounded-2xl shadow  flex flex-col  ">
+        <div className="h-full bg-iron-grey flex flex-col items-center font-">
+            <div className=' h-screen flex flex-col items-center justify-center'>
+                <p className='text-center  text-white max-w-3xl text-3xl font-michroma'>“Always there, unchanged, in a configuration nobody else could see, was a glowing list of messages from all the people you knew, and from people you didn&apos;t know, all in the same letters, like the universal handwriting of thought or of the world.”</p>
+            </div>
+
+            <div className="w-full max-w-md bg-white rounded-2xl shadow  flex flex-col  font-sans">
                 <div className="w-full flex justify-between pt-4 px-4 top-0 sticky">
 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" className='text-blue-600 w-10 h-auto'>

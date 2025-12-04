@@ -75,10 +75,10 @@ export const MacbookScroll = ({
           translateY: textTransform,
           opacity: textOpacity,
         }}
-        className="mb-20 text-center text-3xl font-bold text-white"
+        className="mb-20 text-center text-6xl max-w-4xl font-michroma text-white"
       >
         {title || (
-          <span>
+          <span className="">
             Dear UHS <br className="" /><br /> A semester's reflection by Ishan and Jacob
           </span>
         )}
