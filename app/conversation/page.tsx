@@ -1,7 +1,34 @@
 
 "use client"
 import { motion } from 'framer-motion';
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import { useEffect } from 'react';
+// import SplitType from "split-type";
 const Page = () => {
+
+    // useEffect(() => {
+    //     const elements = document.querySelectorAll<HTMLElement>(".slower-split");
+      
+    //     elements.forEach((el) => {
+    //       // Split the text
+    //       const text = new SplitType(el, { types: "chars" });
+      
+    //       // Animate the characters
+    //       gsap.from(text.chars, {
+    //         scrollTrigger: {
+    //           trigger: el,
+    //           start: "top 60%",
+    //           end: "bottom 30%",
+    //           scrub: true,
+    //         },
+    //         opacity: 0,
+    //         stagger: 0.05,
+    //         duration: 1,
+    //       });
+    //     });
+    //   }, []);
+      
 
     const messages = [
         { id: 1, sender: "You", text: "Hi, it's Jacob! So glad we're working together this semester :) " },
@@ -16,7 +43,7 @@ const Page = () => {
     return (
         <div className="h-full bg-iron-grey flex flex-col items-center font-">
             <div className=' h-screen flex flex-col items-center justify-center'>
-                <p className='text-center  text-white max-w-3xl text-3xl font-michroma'>“Always there, unchanged, in a configuration nobody else could see, was a glowing list of messages from all the people you knew, and from people you didn&apos;t know, all in the same letters, like the universal handwriting of thought or of the world.”</p>
+                <p className='text-center slower-split text-white max-w-3xl text-3xl font-michroma'>“Always there, unchanged, in a configuration nobody else could see, was a glowing list of messages from all the people you knew, and from people you didn&apos;t know, all in the same letters, like the universal handwriting of thought or of the world.”</p>
             </div>
 
             <div className="w-full max-w-md bg-white rounded-2xl shadow  flex flex-col  font-sans">
