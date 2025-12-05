@@ -49,7 +49,16 @@ const Page = () => {
         { id: 8, sender: "Friend", text: "It just occurred to me that Ashley will be reading these 😭" },
         { id: 8, sender: "You", text: "She’s going to love it" },
         { id: 3, sender: "Time", text: "Sat, Sep 20 at 5:25 PM" },
-        
+        { id: 10, sender: "Image", from: "J", text: "", src: "/jacobarchive2.png", link: "https://dear-uhs-dayinlife.vercel.app/" },
+        { id: 9, sender: "You", text: "enjoy :)" },
+        { id: 8, sender: "Friend", text: "THIS IS SO COOL" },
+        { id: 8, sender: "Friend", text: "how did you have time to make an entire clone YouTube" },
+        { id: 9, sender: "You", text: "Thank god for Rosh Hashannah" },
+        { id: 8, sender: "Friend", text: "My only complaint is that the subscribe button doesn’t work" },
+        { id: 3, sender: "Time", text: "Sat, Sep 27 at 7:51 PM" },
+        { id: 8, sender: "Friend", text: "I’ll give you my comic strip in person tomorrow" },
+        { id: 10, sender: "Image", from: "I", text: "", src: "/ishanarchive2.png", link: "https://drive.google.com/file/d/1-vXaH1Hn6Kq7kzVWIlKikAwOENTxaV1n/view?usp=sharing" },
+        { id: 3, sender: "Time", text: "Sat, Oct 4 at 3:06 PM" },
     ];
 
 
