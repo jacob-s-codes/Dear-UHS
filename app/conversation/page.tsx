@@ -9,11 +9,11 @@ const Page = () => {
 
     // useEffect(() => {
     //     const elements = document.querySelectorAll<HTMLElement>(".slower-split");
-      
+
     //     elements.forEach((el) => {
     //       // Split the text
     //       const text = new SplitType(el, { types: "chars" });
-      
+
     //       // Animate the characters
     //       gsap.from(text.chars, {
     //         scrollTrigger: {
@@ -28,7 +28,7 @@ const Page = () => {
     //       });
     //     });
     //   }, []);
-      
+
 
     const messages = [
         { id: 1, sender: "You", text: "Hi, it's Jacob! So glad we're working together this semester :) " },
@@ -36,18 +36,32 @@ const Page = () => {
         { id: 3, sender: "Time", text: "Sat, Sep 6 at 9:18 PM" },
         { id: 4, sender: "You", text: "I have my first letter ready 😬" },
         { id: 5, sender: "Friend", text: "Awesome, I’m ready whenever 👀" },
-        { id: 6, sender: "Image", text: "", src: "/jacobarchive1.png", link: "https://docs.google.com/document/d/1_E66rLTLh1SvB-U-MPbXiJ-5qDUgYwy0l6NgB1NIyEw/edit?usp=sharing"}
+        // msg.from 'J' (Jacob/You) should be right/blue
+        { id: 6, sender: "Image", from: "J", text: "", src: "/jacobarchive1.png", link: "https://docs.google.com/document/d/1_E66rLTLh1SvB-U-MPbXiJ-5qDUgYwy0l6NgB1NIyEw/edit?usp=sharing" },
+        { id: 7, sender: "Time", text: "Sat, Sep 13 at 2:34 PM" },
+        { id: 8, sender: "Friend", text: "Response is ready… you want it now or in class?" },
+        { id: 9, sender: "You", text: "Ooh awesome! I’m excited. I guess now?" },
+        // msg.from 'I' (Ishan/Friend) should be left/gray
+        { id: 10, sender: "Image", from: "I", text: "", src: "/ishanarchive1.png", link: "https://www.youtube.com/watch?v=wLAtDidkJOw" },
+        { id: 9, sender: "You", text: "DUDE" },
+        { id: 9, sender: "You", text: "🔥🔥🔥" },
+        { id: 9, sender: "You", text: "Was not expecting that" },
+        { id: 8, sender: "Friend", text: "It just occurred to me that Ashley will be reading these 😭" },
+        { id: 8, sender: "You", text: "She’s going to love it" },
+        { id: 3, sender: "Time", text: "Sat, Sep 20 at 5:25 PM" },
+        
     ];
 
 
     return (
         <div className="h-full bg-iron-grey flex flex-col items-center font-">
             <div className=' h-screen flex flex-col items-center justify-center'>
-                <p className='text-center slower-split text-white max-w-3xl text-3xl font-michroma'>“Always there, unchanged, in a configuration nobody else could see, was a glowing list of messages from all the people you knew, and from people you didn&apos;t know, all in the same letters, like the universal handwriting of thought or of the world.”</p>
+                <p className='text-center slower-split text-white max-w-5xl text-5xl font-michroma'>“Always there, unchanged, in a configuration nobody else could see, was a glowing list of messages from all the people you knew, and from people you didn&apos;t know, all in the same letters, like the universal handwriting of thought or of the world.”</p>
+                <p className=' text-white text-5xl font-michroma pt-6 '>-Elif Batuman, <span className=' italic'>The Idiot</span></p>
             </div>
 
-            <div className="w-full max-w-md bg-white rounded-2xl shadow  flex flex-col  font-sans">
-                <div className="w-full flex justify-between pt-4 px-4 top-0 sticky">
+            <div className="w-full max-w-md bg-white rounded-3xl  flex flex-col  font-sans">
+                <div className="w-full flex justify-between py-4 px-4 top-0 sticky backdrop-blur-xl">
 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" className='text-blue-600 w-10 h-auto'>
                         <path d="M15 6 L9 12 L15 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -71,42 +85,74 @@ const Page = () => {
                 <p className='text-center font-semibold text-gray-400 pt-4'>iMessage</p>
                 <p className='text-center font-semibold text-gray-400'>Tue, Sep 2 at 9:12 PM</p>
 
-                <div className="flex flex-col gap-[5vh] overflow-y-auto  p-2">
-                    {messages.map((msg, index) => (
-                        <motion.div
-                            key={msg.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.2 }}
-                            transition={{ duration: 0.3, delay: index * 0.05 }}
-                            className={`p-3  max-w-[80%]  text-lg ${msg.sender === "You"
-                                ? "bg-blue-500 text-white self-end shadow rounded-2xl"
-                                : msg.sender === "Friend" ? "bg-gray-400 text-white self-start shadow rounded-2xl" : msg.sender === "Time" ? "text-gray-400 self-center bg-none font-semibold" : "bg-[#3b77db] self-end bg-none rounded-lg"
-                                }`}
-                        >
-                            {msg.src ? (
-                                <a href={msg.link} target="_blank"><img
-                                    src={msg.src}
-                                    alt=""
-                                    
-                                    className="rounded-2xl self-end"
-                                /></a>
-                            ) : (
-                                <div
-                                    className={` text-lg ${msg.sender === "You"
-                                            ? "bg-blue-500 text-white self-end rounded-2xl"
-                                            : msg.sender === "Friend"
-                                                ? "bg-gray-400 text-white self-start rounded-2xl"
-                                                : "text-gray-400 self-center font-semibold"
-                                        }`}
+                <div className="flex flex-col gap-3 overflow-y-auto px-4 pb-4 bg-gray-50 min-h-[50vh]">
+                    {messages.map((msg, index) => {
+
+                        // --- Shared Animation Properties ---
+                        const animationProps = {
+                            initial: { opacity: 0, y: 20 },
+                            whileInView: { opacity: 1, y: 0 },
+                            viewport: { once: true, amount: 0.2 },
+                            transition: { duration: 0.3, delay: index * 0.05 },
+                            key: msg.id,
+                        };
+
+                        // 1. Time message (Center)
+                        if (msg.sender === "Time") {
+                            return (
+                                <motion.div
+                                    {...animationProps}
+                                    className="text-gray-400 self-center font-semibold text-xs mt-3 mb-1"
                                 >
                                     {msg.text}
-                                </div>
-                            )}
-                        </motion.div>
-                    ))}
+                                </motion.div>
+                            );
+                        }
+
+                        // 2. Image message (Left/Right, Gray/Blue)
+                        if (msg.src) {
+                            const isJacob = msg.from === "J"; // 'You'
+                            const bubbleColor = isJacob ? "bg-blue-500" : "bg-gray-200";
+                            const alignment = isJacob ? "self-end" : "self-start";
+
+                            return (
+                                <motion.div
+                                    {...animationProps}
+                                    // Outer div handles alignment
+                                    className={`max-w-[70%] ${alignment}`} 
+                                >
+                                    <a href={msg.link} target="_blank" className="block">
+                                        {/* Inner div handles color and ASYMMETRIC rounding for the image/link container */}
+                                        <div className={`p-1 shadow-md ${bubbleColor} rounded-xl ${isJacob ? 'rounded-br-lg' : 'rounded-bl-lg'}`}>
+                                            <img
+                                                src={msg.src}
+                                                alt="Shared Content"
+                                                className="rounded-xl w-full h-auto object-cover"
+                                                onError={(e) => { e.currentTarget.src = 'https://placehold.co/300x200/cccccc/333333?text=Content+Link'; }}
+                                            />
+                                        </div>
+                                    </a>
+                                </motion.div>
+                            );
+                        }
+
+                        // 3. Text message (Left/Right, Gray/Blue)
+                        const isYou = msg.sender === "You";
+                        const bubbleColor = isYou ? "bg-blue-500" : "bg-gray-200";
+                        const alignment = isYou ? "self-end" : "self-start";
+                        const textColor = isYou ? "text-white" : "text-gray-900"; // Dark text for light gray bubble
+                        const roundingClass = isYou ? 'rounded-xl rounded-br-lg' : 'rounded-xl rounded-bl-lg';
 
 
+                        return (
+                            <motion.div
+                                {...animationProps}
+                                className={`p-3 max-w-[80%] text-lg shadow ${textColor} ${bubbleColor} ${alignment} ${roundingClass}`}
+                            >
+                                {msg.text}
+                            </motion.div>
+                        );
+                    })}
                 </div>
 
 
