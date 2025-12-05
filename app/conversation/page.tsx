@@ -112,7 +112,7 @@ const Page = () => {
                         // 2. Image message (Left/Right, Gray/Blue)
                         if (msg.src) {
                             const isJacob = msg.from === "J"; // 'You'
-                            const bubbleColor = isJacob ? "bg-blue-500" : "bg-gray-200";
+                            const bubbleColor = isJacob ? "bg-blue-500" : "bg-[#828488]";
                             const alignment = isJacob ? "self-end" : "self-start";
 
                             return (
