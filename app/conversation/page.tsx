@@ -59,6 +59,15 @@ const Page = () => {
         { id: 8, sender: "Friend", text: "I’ll give you my comic strip in person tomorrow" },
         { id: 10, sender: "Image", from: "I", text: "", src: "/ishanarchive2.png", link: "https://drive.google.com/file/d/1-vXaH1Hn6Kq7kzVWIlKikAwOENTxaV1n/view?usp=sharing" },
         { id: 3, sender: "Time", text: "Sat, Oct 4 at 3:06 PM" },
+        { id: 9, sender: "You", text: "I have the rap ready!" },
+        { id: 10, sender: "Image", from: "J", text: "", src: "/jacobarchive3.png", link: "https://drive.google.com/file/d/1QEo1tUE1YDVzo3JYLzhjIedfVoAW9mUb/view?usp=sharing" },
+        { id: 8, sender: "Friend", text: "WAIT DID YOU MAKE THE BEAT YOURSELF 🔥" },
+        { id: 8, sender: "Friend", text: "that was actually so entertaining" },
+        { id: 8, sender: "You", text: "Yes! GarageBand 💪" },
+        { id: 3, sender: "Time", text: "Sat, Oct 11 at 8:25 PM" },
+        { id: 10, sender: "Image", from: "I", text: "", src: "/ishanarchive3.png", link: "https://docs.google.com/document/d/1MZDrExFTl1QGygCSVFkBu0mDKMT_jDaAaLoe0fP_u9I/edit?usp=sharing" },
+        { id: 3, sender: "Time", text: "Sat, Oct 11 at 8:25 PM" },
+        { id: 10, sender: "Image", from: "J", text: "", src: "/jacobarchive4.png", link: "https://drive.google.com/drive/folders/1m73Xs18FrmBxXhUpK6xIyL520S01Do3D?usp=sharing" },
     ];
 
 
