@@ -68,6 +68,15 @@ const Page = () => {
         { id: 10, sender: "Image", from: "I", text: "", src: "/ishanarchive3.png", link: "https://docs.google.com/document/d/1MZDrExFTl1QGygCSVFkBu0mDKMT_jDaAaLoe0fP_u9I/edit?usp=sharing" },
         { id: 3, sender: "Time", text: "Sat, Oct 11 at 8:25 PM" },
         { id: 10, sender: "Image", from: "J", text: "", src: "/jacobarchive4.png", link: "https://drive.google.com/drive/folders/1m73Xs18FrmBxXhUpK6xIyL520S01Do3D?usp=sharing" },
+        { id: 3, sender: "Time", text: "Sun, Oct 26 at 11:12 PM"},
+        { id: 10, sender: "Image", from: "I", text: "", src: "/ishanarchive4.png", link: "https://v0-youtube-player-clone-ol.vercel.app/" },
+        { id: 8, sender: "Friend", text: "Final letter 😬" },
+        { id: 8, sender: "You", text: "Absolutely 🔥" },
+        { id: 8, sender: "You", text: "Legitimately felt like a real vlog" },
+        { id: 8, sender: "You", text: "I can’t believe we’re done" },
+        { id: 8, sender: "Friend", text: "ikr it’s been so fun 😢" },
+        { id: 8, sender: "Friend", text: "..." },
+        { id: 8, sender: "Friend", text: "also how are we supposed to display all of these??" },
     ];
 
 
@@ -78,7 +87,7 @@ const Page = () => {
                 <p className=' text-white text-5xl font-michroma pt-6 '>-Elif Batuman, <span className=' italic'>The Idiot</span></p>
             </div>
 
-            <div className="w-full max-w-md bg-white rounded-3xl  flex flex-col  font-sans">
+            <div className="w-full max-w-md bg-white rounded-xl  flex flex-col  font-sans mb-24 ">
                 <div className="w-full flex justify-between py-4 px-4 top-0 sticky backdrop-blur-xl">
 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" className='text-blue-600 w-10 h-auto'>
