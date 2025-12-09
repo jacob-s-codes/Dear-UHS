@@ -1,5 +1,6 @@
 
 "use client"
+import AudioPlayer from '@/components/audioplayer';
 import { motion } from 'framer-motion';
 // import { gsap } from 'gsap';
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -193,6 +194,11 @@ const Page = () => {
                         Send
                     </button>
                 </div> */}
+            </div>
+
+            <div className='pb-24 text-white text-3xl flex flex-col items-center justify-center gap-y-12'>
+                <h2>Listen to our thoughts and reflection here:</h2>
+                <AudioPlayer src={"/convo.mp3"}/>
             </div>
         </div>
     );
