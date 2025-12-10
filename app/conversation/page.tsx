@@ -32,6 +32,7 @@ const Page = () => {
 
 
     const messages = [
+        { id: 3, sender: "Time", text: "Tue, Sep 2 at 9:12 PM" },
         { id: 1, sender: "You", text: "Hi, it's Jacob! So glad we're working together this semester :) " },
         { id: 2, sender: "Friend", text: "Same here! Looking forward to reading your letter" },
         { id: 3, sender: "Time", text: "Sat, Sep 6 at 9:18 PM" },
@@ -110,8 +111,8 @@ const Page = () => {
                 </div>
 
 
-                <p className='text-center font-semibold text-gray-400 pt-4'>iMessage</p>
-                <p className='text-center font-semibold text-gray-400'>Tue, Sep 2 at 9:12 PM</p>
+                <p className='text-center font-semibold text-gray-400 mt-4 text-sm'>iMessage</p>
+                {/* <p className='text-center font-semibold text-gray-400 text-sm'>Tue, Sep 2 at 9:12 PM</p> */}
 
                 <div className="flex flex-col gap-3 overflow-y-auto px-4 pb-4 bg-gray-50 min-h-[50vh]">
                     {messages.map((msg, index) => {
